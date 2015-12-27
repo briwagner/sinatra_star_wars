@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="/stylesheets/default.css" type="text/css"/>
+
+<div class="container-fluid">
+
+  <div class="row brd-bot">
+    <h1 class="text-padding">The Original Star Wars Films</h1>
+  </div>
+
+  <% @films.each do |film| %>
+  <div class="blurb">
+    <div class="row">
+      <h2 class="text-padding"><%= film.name %></h2>
+      <p class="text-padding">Released in: <%= film.release_year %></p>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="/img/<%= film.image_file %>" alt="<%= film.name %>" class="img-responsive"/>
+      </div>
+
+      <div class="col-sm-8">
+        <h4>Plot</h4>
+        <p><%= film.description %></p>
+        <p><a href="films/<%= film.id %> ">More ... </a></p>
+
+        <h4>Main Characters</h4>
+        <% castlist = film.get_cast %>
+        <ul class="castlist">
+          <% castlist.each do |actor| %>
+            <li><img src="/img/<%= actor.image_file %>"/><%= actor.name %></li>
+          <% end %>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+<% end %>
+
+</div>

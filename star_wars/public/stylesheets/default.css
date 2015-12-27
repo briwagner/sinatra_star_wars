@@ -1,0 +1,49 @@
+.blurb {
+  padding-bottom:1em;
+  border-bottom: 1px solid #333;
+}
+
+.brd-bot {
+  border-bottom: 1.5px solid #333;
+}
+
+h2 {
+  margin-bottom: 0.2em;
+}
+
+.text-padding {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+img {
+  /*max-height:340px;*/
+}
+
+body {
+  background-color: antiquewhite;
+  /*padding:1em;*/
+}
+
+.castlist {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.castlist img {
+  max-height:80px;
+  padding-right: 5px;
+}
+
+.castlist li {
+  padding: 5px 0;
+}
+
+.comments {
+  margin-top: 15px;
+  border-top: 1px solid #333;
+}
+
+.comments p {
+  margin: 30px 0;
+}

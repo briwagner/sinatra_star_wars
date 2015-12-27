@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="stylesheets/default.css" type="text/css"/>
+
+<div class="container-fluid">
+
+  <div class="row brd-bot">
+    <h2 class="text-padding">Welcome to the Star Wars Page</h2>
+    <p class="text-padding"><a href="films">The original trilogy</a></p>
+  </div>
+
+  <div class="row">
+    <% @films.each do |film| %>
+    <div class="col-sm-4">
+      <h3><a href="films/<%= film.id %>" ><%= film.name %></a></h3>
+      <br />
+      <a href="films/<%= film.id %>">
+        <img src="/img/<%= film.image_file %>" alt="<%= film.name %>" class="img-responsive"/>
+      </a>
+    </div>
+    <% end %>
+  </div>
+
+</div>
